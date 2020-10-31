@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RCC"
+             x:Class="RCC.AddItem"
+             Title="ADD MY SHIT">
+    <ContentPage.Content>
+        <Grid Padding="20"
+              RowSpacing="10">
+
+            <Grid.BindingContext>
+                <local:ViewModel />
+            </Grid.BindingContext>
+            
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="nameEntry" Placeholder="Name" Text="{Binding NameEntry}" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="suburbEntry" Placeholder="Suburb" Text="{Binding SuburbEntry}" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="iconEntry" Placeholder="Icon" Text="{Binding IconEntry}" Grid.Row="2" Grid.Column="0"/>
+            <Button Text="Add" Grid.Row="3" Grid.Column="0" Command="{Binding AddClickedCommand}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

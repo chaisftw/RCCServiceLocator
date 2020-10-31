@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RCC.LargeMap">
+    <ContentPage.Content>
+        <Grid x:Name="mapLayout"
+              Padding="5"
+              RowSpacing="5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height=".1*" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Button BackgroundColor="#333333" Grid.Row="1"/>
+            <Grid Grid.Row="1"
+                      Grid.Column="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1.5*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="_nav.png" Scale=".8" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Get Directions" TextColor="#ffffff" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="2"/>
+
+            </Grid>
+            <Button BackgroundColor="Transparent" Grid.Row="1" Clicked="OpenMapsApp"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

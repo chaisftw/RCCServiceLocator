@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RCC"
+             x:Class="RCC.MainPage"
+             Title="Main Menu"
+             BackgroundColor="#3D5AFF">
+    <Grid Padding="5"
+          RowSpacing="5">
+        <Grid.BindingContext>
+            <local:ViewModel />
+        </Grid.BindingContext>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*" />
+
+        </Grid.ColumnDefinitions>
+
+        <Grid ColumnSpacing="5"
+              RowSpacing="5"
+              Grid.Row="0" 
+              Grid.Column="0">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*" />
+                <RowDefinition Height="4.5*" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <Image Source="logo.png"
+                           Grid.Row="0" 
+                           Grid.Column="0"/>
+            </Grid>
+
+            <Grid ColumnSpacing="10"
+                  RowSpacing="10"
+                  Grid.Row="1" 
+                  Grid.Column="0">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <Button BackgroundColor="#FF5930" Grid.Row="0" Grid.Column="0"/>
+                <Grid Grid.Row="0"
+                      Grid.Column="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="_food.png" Grid.Row="1" />
+                    <Label Text="Food" FontSize="Large" TextColor="#ffffff" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2"/>
+
+                </Grid>
+                <Button BackgroundColor="Transparent" Grid.Row="0" Grid.Column="0" Command="{Binding MainClickedCommand}" CommandParameter="food"/>
+
+                <Button BackgroundColor="#FFCA1C" Grid.Row="0" Grid.Column="1" Command="{Binding MainClickedCommand}" CommandParameter="living"/>
+                <Grid Grid.Row="0"
+                      Grid.Column="1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="_shirt.png" Grid.Row="1" />
+                    <Label Text="Living" FontSize="Large" TextColor="#ffffff" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2"/>
+
+                </Grid>
+                <Button BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" Command="{Binding MainClickedCommand}" CommandParameter="living"/>
+                
+                
+                <Button BackgroundColor="#00FF4C" Grid.Row="1" Grid.Column="0"/>
+                <Grid Grid.Row="1"
+                      Grid.Column="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="_tools.png" Grid.Row="1" />
+                    <Label Text="Life Skills" FontSize="Large" TextColor="#ffffff" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2"/>
+
+                </Grid>
+                <Button BackgroundColor="Transparent" Grid.Row="1" Grid.Column="0" Command="{Binding MainClickedCommand}" CommandParameter="lifeSkills"/>
+            
+                <Button BackgroundColor="#64F200" Grid.Row="1" Grid.Column="1"/>
+                <Grid Grid.Row="1"
+                      Grid.Column="1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="_health.png" Grid.Row="1" />
+                    <Label Text="Health" FontSize="Large" TextColor="#ffffff" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2"/>
+
+                </Grid>
+                <Button BackgroundColor="Transparent" Grid.Row="1" Grid.Column="1" Command="{Binding MainClickedCommand}" CommandParameter="health"/>
+                
+                <Button BackgroundColor="#A300EF" Grid.Row="2" Grid.Column="0"/>
+                <Grid Grid.Row="2"
+                      Grid.Column="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="_money.png" Grid.Row="1" />
+                    <Label Text="Money" FontSize="Large" TextColor="#ffffff" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2"/>
+
+                </Grid>
+                <Button BackgroundColor="Transparent" Grid.Row="2" Grid.Column="0" Command="{Binding MainClickedCommand}" CommandParameter="money"/>
+                
+                <Button BackgroundColor="#3B35EA" Grid.Row="2" Grid.Column="1"/>
+                <Grid Grid.Row="2"
+                      Grid.Column="1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="_shower.png" Grid.Row="1" />
+                    <Label Text="Facilities" FontSize="Large" TextColor="#ffffff" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2"/>
+
+                </Grid>
+                <Button BackgroundColor="Transparent" Grid.Row="2" Grid.Column="1" Command="{Binding MainClickedCommand}" CommandParameter="facility"/>
+
+            </Grid>
+        </Grid>
+        <Grid ColumnSpacing="5"
+              RowSpacing="5"
+              Grid.Row="1" 
+              Grid.Column="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button BackgroundColor="#333333" Grid.Row="0" Grid.Column="1"/>
+            <Grid Grid.Row="0"
+                      Grid.Column="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".1*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height=".1*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="_sos.png" Grid.Row="1" Grid.Column="0" />
+
+            </Grid>
+            <Button BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" Command="{Binding SOSClickedCommand}"/>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RCC"
+             x:Class="RCC.SOS"
+             Title="SOS"
+             BackgroundColor="#3D5AFF">
+
+    <Grid Padding="5"
+          RowSpacing="5">
+
+        <Grid.BindingContext>
+            <local:ViewModel />
+        </Grid.BindingContext>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*" />
+            <RowDefinition Height="5*" />
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*" />
+
+        </Grid.ColumnDefinitions>
+
+        <Grid  Grid.Row="0" 
+               Grid.Column="0">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                
+            </Grid.ColumnDefinitions>
+            
+            <Image Source="logo.png"
+               Grid.Row="0" 
+               Grid.Column="0"/>
+
+            <Image Source="_sos.png"
+               Grid.Row="0" 
+               Grid.Column="1"/>
+        </Grid>
+        
+
+        <Grid ColumnSpacing="5"
+              RowSpacing="5"
+              Grid.Row="1" 
+              Grid.Column="0">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+            <Button BackgroundColor="#3B35EA" Grid.Row="0" Grid.Column="0"/>
+            <Grid Grid.Row="0"
+                      Grid.Column="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="_000.png" Grid.Row="1" />
+                <Label Text="Emergency" FontSize="Large" TextColor="#ffffff" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2"/>
+
+            </Grid>
+            <Button BackgroundColor="Transparent" Grid.Row="0" Grid.Column="0" Command="{Binding CallCommand}" CommandParameter="000"/>
+
+            <Button BackgroundColor="#3B35EA" Grid.Row="0" Grid.Column="1"/>
+            <Grid Grid.Row="0"
+                      Grid.Column="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="_sui.png" Grid.Row="1" />
+                <Label Text="Crisis Support" FontSize="Large" TextColor="#ffffff" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2"/>
+
+            </Grid>
+            <Button BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" Command="{Binding CallCommand}" CommandParameter="131114"/>
+
+        </Grid>
+    </Grid>
+
+</ContentPage>
